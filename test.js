@@ -1,13 +1,11 @@
-'use strict';
-var test = require('ava');
-var trimRepeated = require('./');
+import test from 'ava';
+import fn from './';
 
-test(function (t) {
-	t.assert(trimRepeated('foo--bar---baz', '-') === 'foo-bar-baz');
-	t.assert(trimRepeated('foo\\\\bar', '\\') === 'foo\\bar');
-	t.assert(trimRepeated('foo))bar', ')') === 'foo)bar');
-	t.assert(trimRepeated('foo🐴🐴bar', '🐴') === 'foo🐴bar');
-	t.assert(trimRepeated('foo@#@#bar', '@#') === 'foo@#bar');
-	t.assert(trimRepeated('foo#@#@bar', '@#') === 'foo#@#@bar');
-	t.end();
+test(t => {
+	t.is(fn('foo--bar---baz', '-'), 'foo-bar-baz');
+	t.is(fn('foo\\\\bar', '\\'), 'foo\\bar');
+	t.is(fn('foo))bar', ')'), 'foo)bar');
+	t.is(fn('foo🐴🐴bar', '🐴'), 'foo🐴bar');
+	t.is(fn('foo@#@#bar', '@#'), 'foo@#bar');
+	t.is(fn('foo#@#@bar', '@#'), 'foo#@#@bar');
 });
