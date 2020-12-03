@@ -1,14 +1,12 @@
-# trim-repeated [![Build Status](https://travis-ci.org/sindresorhus/trim-repeated.svg?branch=master)](https://travis-ci.org/sindresorhus/trim-repeated)
+# trim-repeated
 
 > Trim a consecutively repeated substring: `foo--bar---baz` → `foo-bar-baz`
-
 
 ## Install
 
 ```
 $ npm install --save trim-repeated
 ```
-
 
 ## Usage
 
@@ -26,22 +24,16 @@ trimRepeated('foo@#@#baz', '@#');
 
 #### input
 
-*Required*  
+*Required*\
 Type: `string`
 
 #### target
 
-*Required*  
+*Required*\
 Type: `string`
 
 Substring to trim.
 
-
 ## Related
 
 - [`condense-whitespace`](https://github.com/sindresorhus/condense-whitespace) - Remove leading, trailing and repeated whitespace from a string
-
-
-## License
-
-MIT © [Sindre Sorhus](http://sindresorhus.com)
