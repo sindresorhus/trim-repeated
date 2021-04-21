@@ -5,13 +5,13 @@
 ## Install
 
 ```
-$ npm install --save trim-repeated
+$ npm install trim-repeated
 ```
 
 ## Usage
 
 ```js
-var trimRepeated = require('trim-repeated');
+import trimRepeated from 'trim-repeated';
 
 trimRepeated('foo--bar---baz', '-');
 //=> 'foo-bar-baz'

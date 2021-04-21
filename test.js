@@ -1,11 +1,11 @@
 import test from 'ava';
-import fn from './';
+import trimRepeated from './index.js';
 
-test(t => {
-	t.is(fn('foo--bar---baz', '-'), 'foo-bar-baz');
-	t.is(fn('foo\\\\bar', '\\'), 'foo\\bar');
-	t.is(fn('foo))bar', ')'), 'foo)bar');
-	t.is(fn('foo🐴🐴bar', '🐴'), 'foo🐴bar');
-	t.is(fn('foo@#@#bar', '@#'), 'foo@#bar');
-	t.is(fn('foo#@#@bar', '@#'), 'foo#@#@bar');
+test('main', t => {
+	t.is(trimRepeated('foo--bar---baz', '-'), 'foo-bar-baz');
+	t.is(trimRepeated('foo\\\\bar', '\\'), 'foo\\bar');
+	t.is(trimRepeated('foo))bar', ')'), 'foo)bar');
+	t.is(trimRepeated('foo🐴🐴bar', '🐴'), 'foo🐴bar');
+	t.is(trimRepeated('foo@#@#bar', '@#'), 'foo@#bar');
+	t.is(trimRepeated('foo#@#@bar', '@#'), 'foo#@#@bar');
 });
