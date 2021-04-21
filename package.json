@@ -1,6 +1,6 @@
 {
 	"name": "trim-repeated",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Trim a consecutively repeated substring: foo--bar---baz → foo-bar-baz",
 	"license": "MIT",
 	"repository": "sindresorhus/trim-repeated",
